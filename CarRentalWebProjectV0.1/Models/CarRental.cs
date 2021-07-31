@@ -6,8 +6,8 @@ namespace Models {
     public class CarRental {
         public int CarRentalId { get; set; }
         public string Name { get; set; }
-        public int CpfCnpj { get; set; }
-        public int Telephone { get; set; }
+        public double CpfCnpj { get; set; }
+        public double Telephone { get; set; }
         public string Email { get; set; }
         public string Country { get; set; }
         public string Model { get; set; }

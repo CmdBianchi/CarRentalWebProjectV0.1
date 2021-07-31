@@ -19,7 +19,7 @@ namespace Controllers {
             return View(await _context.CarRentals.ToListAsync());
         }
 
-        [HttpGet]
+        [HttpGet] // --- > NEW CLIENT BUTTON
         public IActionResult NewCarRental() {
             return View();
         }
@@ -47,6 +47,13 @@ namespace Controllers {
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpPost] // --- > DELETE BUTTON
+        public async Task<IActionResult> Delete(int carRentalId) {
+            CarRental carRental = await _context.CarRentals.FindAsync(carRentalId);
+            _context.CarRentals.Remove(carRental);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
 
         
     }
