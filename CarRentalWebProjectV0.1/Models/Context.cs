@@ -8,7 +8,6 @@ namespace Models {
         public DbSet<CarRental> CarRentals { get; set; }
 
         public Context(DbContextOptions<Context> options) : base(options) {
-
         }
     }
 }
