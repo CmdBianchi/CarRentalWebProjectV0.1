@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-namespace CarRentalWebProjectV0._1.Models {
+namespace Models {
     public class CarRental {
         public int CarRentalId { get; set; }
         public string Name { get; set; }
