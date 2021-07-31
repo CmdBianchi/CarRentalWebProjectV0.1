@@ -79,11 +79,10 @@
                 @Html.DisplayFor(modelItem => item.Devolution)
             </td>
             <td>
-                <a asp-action="Update" asp-route-id="@item.CarRentalId" class="btn btn-primary">Update Client</a> 
-                <form asp-action="Delete" asp-route-id="@item.CarRentalId">
+                <a asp-action="Update" asp-route-carRentalId="@item.CarRentalId" class="btn btn-primary">Update</a> 
+                <form asp-action="Delete" asp-route-carRentalId="@item.CarRentalId">
                     <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
-                <a >Delete</a>
+                </form>                
             </td>
         </tr>
 }

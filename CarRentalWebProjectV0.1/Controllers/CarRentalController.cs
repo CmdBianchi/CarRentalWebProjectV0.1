@@ -31,5 +31,23 @@ namespace Controllers {
 
             return RedirectToAction(nameof(Index));
         }
+
+        [HttpGet] // --- > UPDATE BUTTON
+        public async Task<IActionResult> Update(int carRentalId) {
+            CarRental carRental = await _context.CarRentals.FindAsync(carRentalId);
+
+            return View(carRental);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Update(CarRental carRental) {
+            _context.CarRentals.Update(carRental);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
+        
     }
 }
