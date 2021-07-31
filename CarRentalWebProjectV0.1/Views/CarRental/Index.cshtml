@@ -1,11 +1,8 @@
 ﻿@model IEnumerable<Models.CarRental>
-
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>Client Control</h1> 
-
+<h1>Client Control</h1>
 <p>
     <a asp-action="NewCarRental" class="btn btn-success">Novo CLiente</a>
 </p>
@@ -46,46 +43,46 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CpfCnpj)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telephone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Country)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Model)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LicensePlate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Payment)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Withdraw)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Devolution)
-            </td>
-            <td>
-                <a asp-action="Update" asp-route-carRentalId="@item.CarRentalId" class="btn btn-primary">Update</a>
-                <form asp-action="Delete" asp-route-carRentalId="@item.CarRentalId">
-                    <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CpfCnpj)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telephone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Model)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LicensePlate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Payment)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Withdraw)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Devolution)
+                </td>
+                <td>
+                    <a asp-action="Update" asp-route-carRentalId="@item.CarRentalId" class="btn btn-primary">Update</a>
+                    <form asp-action="Delete" asp-route-carRentalId="@item.CarRentalId">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
 
-            </td>
-        </tr>
-}
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

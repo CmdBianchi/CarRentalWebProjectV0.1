@@ -1,16 +1,11 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace CarRentalWebProjectV0._1.Migrations
-{
-    public partial class creationSqlite : Migration
-    {
-        protected override void Up(MigrationBuilder migrationBuilder)
-        {
+namespace CarRentalWebProjectV0._1.Migrations {
+    public partial class creationSqlite : Migration {
+        protected override void Up(MigrationBuilder migrationBuilder) {
             migrationBuilder.CreateTable(
                 name: "CarRentals",
-                columns: table => new
-                {
+                columns: table => new {
                     CarRentalId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: true),
@@ -24,14 +19,12 @@ namespace CarRentalWebProjectV0._1.Migrations
                     Withdraw = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Devolution = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
-                constraints: table =>
-                {
+                constraints: table => {
                     table.PrimaryKey("PK_CarRentals", x => x.CarRentalId);
                 });
         }
 
-        protected override void Down(MigrationBuilder migrationBuilder)
-        {
+        protected override void Down(MigrationBuilder migrationBuilder) {
             migrationBuilder.DropTable(
                 name: "CarRentals");
         }

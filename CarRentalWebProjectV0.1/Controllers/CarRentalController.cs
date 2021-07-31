@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Models;
 using Microsoft.EntityFrameworkCore;
-
 namespace Controllers {
     public class CarRentalController : Controller {
 
@@ -53,8 +52,6 @@ namespace Controllers {
             _context.CarRentals.Remove(carRental);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-
-        
+        }  
     }
 }

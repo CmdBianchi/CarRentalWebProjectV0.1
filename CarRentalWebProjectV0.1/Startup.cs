@@ -10,7 +10,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Models;
-
 namespace CarRentalWebProjectV0._1 {
     public class Startup {
         public Startup(IConfiguration configuration) {
