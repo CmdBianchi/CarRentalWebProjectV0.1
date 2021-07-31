@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Client Control</h1> 
 
 <p>
     <a asp-action="NewCarRental" class="btn btn-success">Novo CLiente</a>
@@ -79,11 +79,11 @@
                 @Html.DisplayFor(modelItem => item.Devolution)
             </td>
             <td>
-                <a asp-action="Update" asp-route-carRentalId="@item.CarRentalId" class="btn btn-primary">Update</a> 
+                <a asp-action="Update" asp-route-carRentalId="@item.CarRentalId" class="btn btn-primary">Update</a>
                 <form asp-action="Delete" asp-route-carRentalId="@item.CarRentalId">
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
-                
+
             </td>
         </tr>
 }
